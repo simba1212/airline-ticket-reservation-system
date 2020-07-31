@@ -1,0 +1,107 @@
+/*
+	Name: RONAK PRAJAPATI
+	Copyright: 
+	Author: 
+	Date: 31-07-20 16.22
+	Description: AIRLINE TICKET RESERVATION SYSTEM
+*/
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<string.h>
+main()
+{
+	int c,p,i,j; //c=class,p=peak seat
+	int s[10]={}; //seat size
+	
+	for(i=0;i<10;i++)
+	{
+		
+		printf("*****welcome*****\n");
+		printf("-----airline tickit reservation-----\n\n");
+	
+		printf("1 :for first class\n");
+		printf("2 :for economic class\n");
+		printf("\n\nchoose the option: ");
+		scanf("%d",&c);
+			
+		switch(c)
+		{
+			
+		
+		    case 1: 
+		    
+			printf("first class\n");
+			printf("seat available are (1/2/3/4/5): \n");
+			
+				do
+				{
+					printf("peak the seat: ");
+					scanf("%d",&p);
+				
+				    s[i]=p;
+				
+					for(j=0;j<i;j++)
+					{
+						if(s[i]==s[j])
+							{
+								printf(" \nthis seat is taken\n");
+								break;
+							}
+				    }
+				}  
+				while(j!=i);
+				
+				if(s[i]<=5)
+				{
+					printf("===============\n\n");
+					printf("class:first class\n\n your sit:%d\n\n",s[i]);	
+					printf("===============\n\n");
+				}
+					else
+						printf("\n\n wrong seat number....enter valid seat number\n\n");
+						break;
+				
+				  case 2:
+				  	
+				  	printf("economic class\n");
+				  	printf("seat available are (6/7/8/9/10)\n");
+				  	
+				  	do
+				  	{
+				  		printf(" peak the seat: ");
+				  		scanf("%d",&p);
+				  		
+				  		s[i]=p;
+				  		
+				  		for(j=0;j<i;j++)
+				  		{
+				  			if(s[i]==s[j])
+				  			{
+				  				printf("\nthis saet is taken\n");
+				  				break;
+							  }
+						  }
+				  		
+					  }
+					  while(j!=i);
+					  	if(s[i]>=6)
+					  	{
+						  	printf("===============\n\n");
+						  	printf("class:economic class\n\n your sit:%d\n",s[i]);
+						  	printf("===============\n\n");
+					    }
+					    else
+							printf("\n\n wrong seat number.....input valid seat number\n\n");
+						break;
+						
+				default:
+					
+					break;
+		}
+		
+    }
+     getch();
+}
+
